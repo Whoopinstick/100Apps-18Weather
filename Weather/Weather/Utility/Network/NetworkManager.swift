@@ -13,7 +13,7 @@ final class NetworkManager {
     
     private init() {}
     
-    func getAppetizers(completed: @escaping (Result<Weather, WWError>) -> Void) {
+    func getWeather(completed: @escaping (Result<Weather, WWError>) -> Void) {
         guard let url = URL(string: API.sampleEndpoint) else {
             completed(.failure(.invalidURL))
             return
