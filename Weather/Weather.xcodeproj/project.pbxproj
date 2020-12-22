@@ -17,6 +17,7 @@
 		0A19F67F25897C19003B79BA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A19F67E25897C19003B79BA /* NetworkManager.swift */; };
 		0A19F68325897CC2003B79BA /* WWError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A19F68225897CC2003B79BA /* WWError.swift */; };
 		0A6292A3258981BD00154505 /* WWProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6292A2258981BD00154505 /* WWProgressView.swift */; };
+		0ACE64CF25916EA80051F24E /* MainViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACE64CE25916EA80051F24E /* MainViewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		0A19F67E25897C19003B79BA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		0A19F68225897CC2003B79BA /* WWError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWError.swift; sourceTree = "<group>"; };
 		0A6292A2258981BD00154505 /* WWProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWProgressView.swift; sourceTree = "<group>"; };
+		0ACE64CE25916EA80051F24E /* MainViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				0A0FAD9525855F7C00B83F63 /* MainView.swift */,
+				0ACE64CE25916EA80051F24E /* MainViewViewModel.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			files = (
 				0A19F67F25897C19003B79BA /* NetworkManager.swift in Sources */,
 				0A0FAD9625855F7C00B83F63 /* MainView.swift in Sources */,
+				0ACE64CF25916EA80051F24E /* MainViewViewModel.swift in Sources */,
 				0A0FADA4258665C300B83F63 /* API.swift in Sources */,
 				0A19F68325897CC2003B79BA /* WWError.swift in Sources */,
 				0A19F670258967CF003B79BA /* APITemplate.swift in Sources */,

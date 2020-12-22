@@ -8,47 +8,23 @@
 import SwiftUI
 
 struct MainView: View {
-    @State private var weather = Weather(lat: 10, lon: 10, timezone: "blah")
-    @State private var isLoading = false
+    @ObservedObject var viewModel = MainViewViewModel()
     var body: some View {
         ZStack {
             VStack {
-                Text("\(weather.lat)")
-                Text("\(weather.lon)")
-                Text(weather.timezone)
+                Text("\(viewModel.weather.lat)")
+                Text("\(viewModel.weather.lon)")
+                Text(viewModel.weather.timezone)
+                Text("\(viewModel.weather.current.temp, specifier: "%.0f")")
                 
             }
             
-            if isLoading {
+            if viewModel.isLoading {
                 WWProgressView()
             }
         }
         .onAppear {
-            isLoading = true
-            NetworkManager.shared.getWeather { [self] result in
-                DispatchQueue.main.async {
-                    isLoading = false
-                    switch result {
-                    case .success(let weather):
-                        self.weather = weather
-                        
-                    case .failure(let error):
-                        switch error {
-                        case .invalidData:
-                            print("")
-                            
-                        case .invalidURL:
-                            print("")
-                            
-                        case .invalidResponse:
-                            print("")
-                            
-                        case .unableToComplete:
-                            print("")
-                        }
-                    }
-                }
-            }
+            viewModel.getWeather()
         }
         
         

@@ -8,8 +8,13 @@
 import Foundation
 
 struct Weather: Codable {
-    let lat: Double
-    let lon: Double
-    let timezone: String
+    var lat: Double = 0.0
+    var lon: Double = 0.0
+    var timezone: String = ""
+    var current: CurrentWeather = CurrentWeather(temp: 0.0)
     
+}
+
+struct CurrentWeather: Codable {
+    let temp: Double
 }
