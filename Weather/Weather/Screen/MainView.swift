@@ -17,7 +17,13 @@ struct MainView: View {
                 Text(viewModel.weather.timezone)
                 Text("\(viewModel.weather.current.temp, specifier: "%.0f")")
                 
+                Text("Daily - ")
+                ForEach(viewModel.weather.daily) { daily in
+                    Text("\(daily.dew_point)")
+                }
+                
             }
+            
             
             if viewModel.isLoading {
                 WWProgressView()
