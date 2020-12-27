@@ -20,8 +20,9 @@ struct MainView: View {
                 Text("Daily - ")
                 ForEach(viewModel.weather.daily) { daily in
                     HStack {
-                        Text("min \(daily.temp.min, specifier: "%.0f")")
-                        Text("max \(daily.temp.max, specifier: "%.0f")")
+                        Text("min: \(daily.temp.min, specifier: "%.0f")")
+                        Text("max: \(daily.temp.max, specifier: "%.0f")")
+                        Text("weather: \(daily.weatherID)")
                     }
                 }
                 
