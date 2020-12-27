@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     @ObservedObject var viewModel = MainViewViewModel()
+    @State private var isDisplayingLocationView = false
     var body: some View {
         NavigationView {
             ZStack {
@@ -40,7 +41,7 @@ struct MainView: View {
             .navigationTitle("Weather")
             .navigationBarItems(leading:
                                     Button(action: {
-                                        
+                                        isDisplayingLocationView = true
                                     }) {
                                         Image(systemName: "gearshape")
                                             .renderingMode(.original)
@@ -56,6 +57,9 @@ struct MainView: View {
             )
             
         }
+        .sheet(isPresented: $isDisplayingLocationView, content: {
+            LocationView()
+        })
     }
 }
 
