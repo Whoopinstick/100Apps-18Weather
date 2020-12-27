@@ -29,9 +29,9 @@ struct LocationView: View {
             Form {
                 Section(header: Text("Coordinates:")) {
                     TextField("Latitude", text: $latitude)
-                        .keyboardType(.decimalPad)
+                        .keyboardType(.numbersAndPunctuation)
                     TextField("Longitude", text: $longitude)
-                        .keyboardType(.decimalPad)
+                        .keyboardType(.numbersAndPunctuation)
                 }
                 
                 Button(action: {
