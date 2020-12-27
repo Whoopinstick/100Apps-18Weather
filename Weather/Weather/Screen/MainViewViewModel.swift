@@ -23,16 +23,16 @@ final class MainViewViewModel: ObservableObject {
                 case .failure(let error):
                     switch error {
                     case .invalidData:
-                        print("")
+                        print("invalid data")
                         
                     case .invalidURL:
-                        print("")
+                        print("invalid url")
                         
                     case .invalidResponse:
-                        print("")
+                        print("invalid response")
                         
                     case .unableToComplete:
-                        print("")
+                        print("unable to complete")
                     }
                 }
             }

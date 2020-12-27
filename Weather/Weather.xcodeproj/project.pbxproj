@@ -132,8 +132,8 @@
 		0A19F676258967FC003B79BA /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				0A0FAD9525855F7C00B83F63 /* MainView.swift */,
 				0ACE64CE25916EA80051F24E /* MainViewViewModel.swift */,
+				0A0FAD9525855F7C00B83F63 /* MainView.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
