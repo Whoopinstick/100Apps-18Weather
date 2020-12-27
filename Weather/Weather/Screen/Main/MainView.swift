@@ -45,6 +45,7 @@ struct MainView: View {
                                     }) {
                                         Image(systemName: "gearshape")
                                             .renderingMode(.original)
+                                            .scaleEffect(1.25)
                                     },
                                 trailing:
                                     Button(action: {
@@ -53,6 +54,7 @@ struct MainView: View {
                                     }) {
                                         Image(systemName: "arrow.clockwise")
                                             .renderingMode(.original)
+                                            .scaleEffect(1.25)
                                     }
             )
             

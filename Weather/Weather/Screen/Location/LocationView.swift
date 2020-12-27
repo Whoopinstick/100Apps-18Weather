@@ -30,6 +30,13 @@ struct LocationView: View {
                 }
             }
             .navigationTitle("Location")
+            .navigationBarItems(trailing: Button(action: {
+                presentationMode.wrappedValue.dismiss()
+            }) {
+                Image(systemName: "xmark.circle")
+                    .renderingMode(.original)
+                    .scaleEffect(1.25)
+            })
         }
     }
     func saveLocation() {
