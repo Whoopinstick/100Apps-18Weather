@@ -9,38 +9,25 @@ import SwiftUI
 
 struct LocationView: View {
     @Environment(\.presentationMode) var presentationMode
-    @State private var latitude: String = ""
-    @State private var longitude: String = ""
-    private var isSaveDisabled: Bool {
-        if latitude.isEmpty || longitude.isEmpty {
-            return true
-        }
-        guard let latDouble = Double(latitude) else { return false }
-        guard let lonDouble = Double(longitude) else { return false }
-        if latDouble >= -90 && latDouble <= 90 && lonDouble >= -180 && lonDouble <= 180 {
-            return false
-        } else {
-            return true
-        }
-    }
+    @StateObject var viewModel = LocationViewViewModel()
     
     var body: some View {
         NavigationView {
             Form {
                 Section(header: Text("Coordinates:")) {
-                    TextField("Latitude", text: $latitude)
+                    TextField("Latitude", text: $viewModel.latitude)
                         .keyboardType(.numbersAndPunctuation)
-                    TextField("Longitude", text: $longitude)
+                    TextField("Longitude", text: $viewModel.longitude)
                         .keyboardType(.numbersAndPunctuation)
                 }
                 
                 Button(action: {
-                    saveLocation()
+                    viewModel.saveLocation()
                     presentationMode.wrappedValue.dismiss()
                 }) {
                     Text("Save Coordinates")
                 }
-                .disabled(isSaveDisabled)
+                .disabled(viewModel.isSaveDisabled)
                 
                 
             }
@@ -53,10 +40,6 @@ struct LocationView: View {
                     .scaleEffect(1.25)
             })
         }
-    }
-    
-    func saveLocation() {
-        print("location saved")
     }
     
 }

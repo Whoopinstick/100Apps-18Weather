@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
-    @ObservedObject var viewModel = MainViewViewModel()
+    @StateObject var viewModel = MainViewViewModel()
     @State private var isDisplayingLocationView = false
     var body: some View {
         NavigationView {

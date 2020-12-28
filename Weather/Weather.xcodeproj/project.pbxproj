@@ -19,6 +19,7 @@
 		0A6292A3258981BD00154505 /* WWProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6292A2258981BD00154505 /* WWProgressView.swift */; };
 		0ACE64CF25916EA80051F24E /* MainViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACE64CE25916EA80051F24E /* MainViewViewModel.swift */; };
 		0AD3EFC22599420100AD66CE /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3EFC12599420100AD66CE /* LocationView.swift */; };
+		0AD62C6E259A5FF400666B05 /* LocationViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD62C6D259A5FF400666B05 /* LocationViewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		0A6292A2258981BD00154505 /* WWProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWProgressView.swift; sourceTree = "<group>"; };
 		0ACE64CE25916EA80051F24E /* MainViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewViewModel.swift; sourceTree = "<group>"; };
 		0AD3EFC12599420100AD66CE /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
+		0AD62C6D259A5FF400666B05 /* LocationViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 		0AD3EFC0259941EE00AD66CE /* Location */ = {
 			isa = PBXGroup;
 			children = (
+				0AD62C6D259A5FF400666B05 /* LocationViewViewModel.swift */,
 				0AD3EFC12599420100AD66CE /* LocationView.swift */,
 			);
 			path = Location;
@@ -250,6 +253,7 @@
 				0A19F670258967CF003B79BA /* APITemplate.swift in Sources */,
 				0A6292A3258981BD00154505 /* WWProgressView.swift in Sources */,
 				0AD3EFC22599420100AD66CE /* LocationView.swift in Sources */,
+				0AD62C6E259A5FF400666B05 /* LocationViewViewModel.swift in Sources */,
 				0A0FAD9425855F7C00B83F63 /* WeatherApp.swift in Sources */,
 				0A19F67C25897B8A003B79BA /* Weather.swift in Sources */,
 			);
