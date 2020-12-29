@@ -44,7 +44,7 @@ struct MainView: View {
                                         isDisplayingLocationView = true
                                     }) {
                                         Image(systemName: "gearshape")
-                                            .renderingMode(.original)
+                                            .foregroundColor(.primary)
                                             .scaleEffect(1.25)
                                     },
                                 trailing:
@@ -53,7 +53,7 @@ struct MainView: View {
                                         viewModel.getWeather()
                                     }) {
                                         Image(systemName: "arrow.clockwise")
-                                            .renderingMode(.original)
+                                            .foregroundColor(.primary)
                                             .scaleEffect(1.25)
                                     }
             )
@@ -68,5 +68,7 @@ struct MainView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
+        
+        
     }
 }

@@ -36,7 +36,7 @@ struct LocationView: View {
                 presentationMode.wrappedValue.dismiss()
             }) {
                 Image(systemName: "xmark.circle")
-                    .renderingMode(.original)
+                    .foregroundColor(.primary)
                     .scaleEffect(1.25)
             })
         }
