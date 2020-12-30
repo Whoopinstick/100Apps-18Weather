@@ -17,6 +17,7 @@
 		0A19F67F25897C19003B79BA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A19F67E25897C19003B79BA /* NetworkManager.swift */; };
 		0A19F68325897CC2003B79BA /* WWError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A19F68225897CC2003B79BA /* WWError.swift */; };
 		0A6292A3258981BD00154505 /* WWProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6292A2258981BD00154505 /* WWProgressView.swift */; };
+		0A6924C2259CDE8300D7887B /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6924C1259CDE8300D7887B /* Alert.swift */; };
 		0ACE64CF25916EA80051F24E /* MainViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACE64CE25916EA80051F24E /* MainViewViewModel.swift */; };
 		0AD3EFC22599420100AD66CE /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3EFC12599420100AD66CE /* LocationView.swift */; };
 		0AD62C6E259A5FF400666B05 /* LocationViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD62C6D259A5FF400666B05 /* LocationViewViewModel.swift */; };
@@ -35,6 +36,7 @@
 		0A19F67E25897C19003B79BA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		0A19F68225897CC2003B79BA /* WWError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWError.swift; sourceTree = "<group>"; };
 		0A6292A2258981BD00154505 /* WWProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWProgressView.swift; sourceTree = "<group>"; };
+		0A6924C1259CDE8300D7887B /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		0ACE64CE25916EA80051F24E /* MainViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewViewModel.swift; sourceTree = "<group>"; };
 		0AD3EFC12599420100AD66CE /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		0AD62C6D259A5FF400666B05 /* LocationViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewViewModel.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 		0A19F68125897CAA003B79BA /* Alert */ = {
 			isa = PBXGroup;
 			children = (
+				0A6924C1259CDE8300D7887B /* Alert.swift */,
 				0A19F68225897CC2003B79BA /* WWError.swift */,
 			);
 			path = Alert;
@@ -251,6 +254,7 @@
 				0A0FADA4258665C300B83F63 /* API.swift in Sources */,
 				0A19F68325897CC2003B79BA /* WWError.swift in Sources */,
 				0A19F670258967CF003B79BA /* APITemplate.swift in Sources */,
+				0A6924C2259CDE8300D7887B /* Alert.swift in Sources */,
 				0A6292A3258981BD00154505 /* WWProgressView.swift in Sources */,
 				0AD3EFC22599420100AD66CE /* LocationView.swift in Sources */,
 				0AD62C6E259A5FF400666B05 /* LocationViewViewModel.swift in Sources */,

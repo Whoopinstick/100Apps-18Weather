@@ -10,6 +10,7 @@ import SwiftUI
 final class MainViewViewModel: ObservableObject {
     @Published var weather = Weather()
     @Published var isLoading = false
+    @Published var alertItem: AlertItem?
     
     func getWeather() {
         isLoading = true
@@ -23,16 +24,16 @@ final class MainViewViewModel: ObservableObject {
                 case .failure(let error):
                     switch error {
                     case .invalidData:
-                        print("invalid data")
+                        alertItem = AlertContext.invalidData
                         
                     case .invalidURL:
-                        print("invalid url")
+                        alertItem = AlertContext.invalidURL
                         
                     case .invalidResponse:
-                        print("invalid response")
+                        alertItem = AlertContext.invalidResponse
                         
                     case .unableToComplete:
-                        print("unable to complete")
+                        alertItem = AlertContext.unableToComplete
                     }
                 }
             }

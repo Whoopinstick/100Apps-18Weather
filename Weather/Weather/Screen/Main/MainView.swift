@@ -62,6 +62,10 @@ struct MainView: View {
         .sheet(isPresented: $isDisplayingLocationView, content: {
             LocationView()
         })
+        
+        .alert(item: $viewModel.alertItem) { alertItem in
+            Alert(title: alertItem.title, message: alertItem.message, dismissButton: alertItem.dismissButton)
+        }
     }
 }
 
