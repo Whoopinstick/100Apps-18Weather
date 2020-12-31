@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct MainView: View {
+    @Environment(\.colorScheme) var colorScheme
     @StateObject var viewModel = MainViewViewModel()
     @State private var isDisplayingLocationView = false
     var body: some View {
         NavigationView {
             ZStack {
+                LinearGradient(gradient: Gradient(colors: [colorScheme == .dark ? Color.gray : Color.white, Color.gray, colorScheme == .dark ? Color.black : Color.blue]), startPoint: .top, endPoint: .bottom)
+                    .edgesIgnoringSafeArea(.all)
+                
                 VStack {
                     Text("\(viewModel.weather.lat)")
                     Text("\(viewModel.weather.lon)")
@@ -29,9 +33,10 @@ struct MainView: View {
                     }
                 }
                 
-                if viewModel.isLoading {
-                    WWProgressView()
-                }
+//                if viewModel.isLoading {
+//                    WWProgressView()
+//                        .offset(x: 0, y: -50)
+//                }
                 
             }
             .onAppear {
@@ -71,7 +76,12 @@ struct MainView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        Group {
+            MainView()
+            MainView()
+                .preferredColorScheme(.dark)
+        }
+            
         
         
     }
