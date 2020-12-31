@@ -9,6 +9,7 @@ import SwiftUI
 
 struct WeatherView: View {
     @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [colorScheme == .dark ? Color.gray : Color.white, Color.gray, colorScheme == .dark ? Color.black : Color.blue]), startPoint: .top, endPoint: .bottom)
@@ -27,7 +28,7 @@ struct WeatherView: View {
                     
                     Spacer()
                     
-                    Text("Detroit, MI")
+                    Text("Detroit")
                         .font(.system(size: 32.0, weight: .medium, design: .default))
                     
                     Spacer()
