@@ -29,6 +29,7 @@ struct WeatherView: View {
                     Spacer()
                     
                     Text("Detroit")
+                        .lineLimit(1)
                         .font(.system(size: 32.0, weight: .medium, design: .default))
                     
                     Spacer()

@@ -42,7 +42,7 @@ struct MainView: View {
         }
         
         .sheet(isPresented: $isDisplayingLocationView, content: {
-            LocationView()
+            LocationView(weather: viewModel)
         })
         
         .alert(item: $viewModel.alertItem) { alertItem in

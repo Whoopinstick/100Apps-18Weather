@@ -10,6 +10,7 @@ import SwiftUI
 struct LocationView: View {
     @Environment(\.presentationMode) var presentationMode
     @StateObject var viewModel = LocationViewViewModel()
+    @ObservedObject var weather: MainViewViewModel
     
     var body: some View {
         NavigationView {
@@ -24,6 +25,7 @@ struct LocationView: View {
                 Button(action: {
                     viewModel.saveLocation()
                     presentationMode.wrappedValue.dismiss()
+                    weather.getWeather()
                 }) {
                     Text("Save Coordinates")
                 }
@@ -46,6 +48,6 @@ struct LocationView: View {
 
 struct LocationView_Previews: PreviewProvider {
     static var previews: some View {
-        LocationView()
+        LocationView(weather: MainViewViewModel())
     }
 }
