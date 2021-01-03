@@ -20,6 +20,7 @@ final class MainViewViewModel: ObservableObject {
                 switch result {
                 case .success(let weather):
                     self.weather = weather
+                    print("retrieved weather")
                     
                 case .failure(let error):
                     switch error {

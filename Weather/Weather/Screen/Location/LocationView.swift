@@ -48,6 +48,10 @@ struct LocationView: View {
 
 struct LocationView_Previews: PreviewProvider {
     static var previews: some View {
-        LocationView(weather: MainViewViewModel())
+        Group {
+            LocationView(weather: MainViewViewModel())
+                .preferredColorScheme(.dark)
+            LocationView(weather: MainViewViewModel())
+        }
     }
 }

@@ -14,6 +14,35 @@ struct Weather: Codable {
     var current: CurrentWeather = CurrentWeather()
     var daily: [Daily] = []
     
+    //API returns "America/CityName" like America/Detroit
+    //TODO: find a proper way to remove country code
+    var americanCity: String {
+        var city = ""
+        var count = 0
+        for char in timezone {
+            if count >= 8 {
+                city.append(char)
+            }
+            count += 1
+        }
+        
+        return city
+    }
+    
+    //skip first day returned.  The API returns the current day as the first element in the array.
+    var dailyForecast: [Daily] {
+        var tempArray: [Daily] = []
+        var count = 0
+        for day in daily {
+            if count > 0 {
+                tempArray.append(day)
+            }
+            count += 1
+        }
+        
+        return tempArray
+    }
+    
     
     struct CurrentWeather: Codable {
         var temp: Double = 0.0
@@ -21,7 +50,7 @@ struct Weather: Codable {
     
     struct Daily: Codable, Identifiable {
         var id = UUID()
-        var dew_point: Double = 0.0
+        var dt: Double = 0.0
         var temp: DailyTemp = DailyTemp()
         var weather: [DailyWeather] = []
         
@@ -29,19 +58,19 @@ struct Weather: Codable {
             let weatherCode = weather[0].id
             switch weatherCode {
             case 200...299:
-                return "thunderstorms"
+                return "cloud.bolt.fill"
             case 300...399:
-                return "drizzle"
+                return "cloud.drizzle.fill"
             case 500...599:
-                return "rain"
+                return "cloud.heavyrain.fill"
             case 600...699:
                 return "snow"
             case 700...799:
-                return "atmosphere?"
+                return "sun.haze.fill"
             case 800:
-                return "clear"
+                return "sun.max.fill"
             case 801...809:
-                return "clouds"
+                return "cloud.fill"
             default:
                 return "unknown"
             }
@@ -58,7 +87,7 @@ struct Weather: Codable {
         }
         
         enum CodingKeys: CodingKey {
-            case dew_point
+            case dt
             case temp
             case weather
         }
